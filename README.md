@@ -9,13 +9,14 @@ php artisan migrate
 php artisan serve
 ```
 
-## API - получить список jokes из бд
-[http://127.0.0.1:8000/api/records](http://127.0.0.1:8000/api/records)
-
 ## Ручной запуск команды (для автоматического запуска нужен cron)
 ```bash
-php artisan jokes:fetch
+php artisan schedule:run // Команда добавлена в Laravel Scheduler, с интервалом в 5 минут
+php artisan jokes:fetch 
 ```
+
+## API - получить список jokes из бд
+[http://127.0.0.1:8000/api/records](http://127.0.0.1:8000/api/records)
 
 ## Почему добавлен репозиторий
 В этой задаче репозиторий не был обязательным, потому что логика получения данных очень простая.  
